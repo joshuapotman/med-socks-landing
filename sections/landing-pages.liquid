@@ -1,1 +1,310 @@
+{% comment %}
+  Med Socks Landing Page
+  Created for: medsocks.co.nz
+  Style: Alo-inspired minimal medical
+{% endcomment %}
 
+{{ 'landing-page.css' | asset_url | stylesheet_tag }}
+
+<div class="med-landing-page">
+
+  <!-- Fixed Navigation -->
+  <nav class="med-nav" id="medNav">
+    <div class="med-nav-container">
+      <a href="/" class="med-nav-logo">MED SOCKS</a>
+      
+      <button class="med-nav-toggle" id="navToggle" aria-label="Menu">
+        <span class="med-hamburger"></span>
+      </button>
+      
+      <div class="med-nav-dropdown" id="navDropdown">
+        <div class="med-dropdown-header">
+          <span>Menu</span>
+          <button class="med-close-nav" id="closeNav" aria-label="Close">✕</button>
+        </div>
+        
+        <ul class="med-nav-links">
+          <li><a href="/pages/about" class="med-nav-link"><span class="med-link-icon">ℹ</span><div class="med-link-text"><strong>About Us</strong><span>Our story & mission</span></div></a></li>
+          <li><a href="/pages/our-story" class="med-nav-link"><span class="med-link-icon">👨‍⚕️</span><div class="med-link-text"><strong>Founder's Story</strong><span>From med student to CEO</span></div></a></li>
+          <li><a href="/pages/compression-guide" class="med-nav-link"><span class="med-link-icon">📊</span><div class="med-link-text"><strong>Compression Guide</strong><span>Find your perfect mmHg</span></div></a></li>
+          <li><a href="/pages/hospital-program" class="med-nav-link"><span class="med-link-icon">🏥</span><div class="med-link-text"><strong>Hospital Program</strong><span>Bulk orders & discounts</span></div></a></li>
+          <li class="med-nav-divider"></li>
+          <li><a href="/pages/faq" class="med-nav-link"><span class="med-link-icon">❓</span><div class="med-link-text"><strong>FAQ</strong><span>Common questions</span></div></a></li>
+          <li><a href="/pages/shipping" class="med-nav-link"><span class="med-link-icon">🚚</span><div class="med-link-text"><strong>Shipping & Returns</strong><span>NZ wide delivery</span></div></a></li>
+          <li><a href="/pages/contact" class="med-nav-link"><span class="med-link-icon">✉</span><div class="med-link-text"><strong>Contact</strong><span>Get in touch</span></div></a></li>
+        </ul>
+        
+        <div class="med-dropdown-footer">
+          <a href="/account">My Account</a>
+          <a href="/cart" class="med-cart-link">Cart <span class="med-cart-badge" id="cartBadge">0</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="med-nav-overlay" id="navOverlay"></div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="med-hero">
+    <div class="med-hero-bg"></div>
+    <div class="med-hero-content">
+      <div class="med-hero-badge">Trusted by 10,000+ Healthcare Professionals</div>
+      <h1 class="med-hero-title">Engineered for<br>12-Hour Shifts</h1>
+      <p class="med-hero-subtitle">Medical-grade compression socks designed by a doctor, for doctors. Finally, footwear that works as hard as you do.</p>
+      <div class="med-hero-ctas">
+        <a href="#products" class="med-btn med-btn-primary">Shop Now</a>
+        <a href="#solution" class="med-btn med-btn-secondary">Why Med Socks?</a>
+      </div>
+    </div>
+    <div class="med-hero-images">
+      <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=560&fit=crop" alt="Doctor" class="med-hero-img">
+      <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&h=560&fit=crop" alt="Nurse" class="med-hero-img">
+      <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=560&fit=crop" alt="Medical Professional" class="med-hero-img">
+    </div>
+  </section>
+
+  <!-- Social Proof Bar -->
+  <div class="med-social-bar">
+    <span>As seen in NZ Medical Journal • Featured in Nurse Today • 4.9/5 from 2,000+ reviews</span>
+  </div>
+
+  <!-- Problem Section -->
+  <section class="med-problem">
+    <div class="med-container">
+      <div class="med-section-label">The Problem</div>
+      <h2 class="med-section-title">Your Feet Are Burning Out<br>Before Your Shift Ends</h2>
+      <div class="med-problem-grid">
+        <div class="med-problem-card">
+          <div class="med-problem-icon">🔥</div>
+          <h3>Chronic Fatigue</h3>
+          <p>Standing for 8-12 hours causes blood pooling, leading to swollen, painful feet that make every step agony by hour 6.</p>
+        </div>
+        <div class="med-problem-card">
+          <div class="med-problem-icon">⚡</div>
+          <h3>Varicose Veins</h3>
+          <p>67% of nurses develop venous insufficiency. Without proper compression, you're risking long-term vascular damage.</p>
+        </div>
+        <div class="med-problem-card">
+          <div class="med-problem-icon">💧</div>
+          <h3>Sweat & Blisters</h3>
+          <p>Cheap cotton socks trap moisture, causing blisters, odor, and infections in high-stress hospital environments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Section -->
+  <section class="med-solution" id="solution">
+    <div class="med-container med-solution-grid">
+      <div class="med-solution-content">
+        <div class="med-section-label">The Solution</div>
+        <h2>Medical-Grade Compression,<br>Designed for Movement</h2>
+        <p>Developed by a New Zealand medical student who spent years watching colleagues suffer in subpar socks. Med Socks combine 20-30 mmHg graduated compression with moisture-wicking technology.</p>
+        <ul class="med-feature-list">
+          <li>20-30 mmHg graduated compression (doctor recommended)</li>
+          <li>Anti-microbial bamboo fiber blend</li>
+          <li>Cushioned heel & toe for 12+ hour comfort</li>
+          <li>Slip-resistant grip for polished hospital floors</li>
+          <li>Reinforced arch support reduces plantar fasciitis</li>
+        </ul>
+      </div>
+      <div class="med-solution-image">
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=800&fit=crop" alt="Med Socks">
+        <div class="med-floating-badge med-badge-top">20-30 mmHg</div>
+        <div class="med-floating-badge med-badge-bottom">NZ Made 🇳🇿</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Section -->
+  <section class="med-community">
+    <div class="med-container">
+      <div class="med-section-label">The Community</div>
+      <h2 class="med-section-title">Join 10,000+ Healthcare Heroes<br>Who've Made the Switch</h2>
+      <div class="med-community-grid">
+        <div class="med-community-item">
+          <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=600&fit=crop" alt="Nurse">
+          <div class="med-community-overlay"><p>Sarah J.</p><span>Emergency RN, Auckland</span></div>
+        </div>
+        <div class="med-community-item">
+          <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=600&fit=crop" alt="Doctor">
+          <div class="med-community-overlay"><p>Dr. Michael T.</p><span>Surgical Resident, Wellington</span></div>
+        </div>
+        <div class="med-community-item">
+          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&h=600&fit=crop" alt="Medical Student">
+          <div class="med-community-overlay"><p>Emma L.</p><span>Medical Student, Otago</span></div>
+        </div>
+        <div class="med-community-item">
+          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=600&fit=crop" alt="Paramedic">
+          <div class="med-community-overlay"><p>James K.</p><span>Paramedic, Christchurch</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="med-stats">
+    <div class="med-container">
+      <div class="med-stats-grid">
+        <div class="med-stat"><div class="med-stat-number">94%</div><div class="med-stat-label">Report Less Fatigue</div></div>
+        <div class="med-stat"><div class="med-stat-number">20-30</div><div class="med-stat-label">mmHg Compression</div></div>
+        <div class="med-stat"><div class="med-stat-number">12hr</div><div class="med-stat-label">All-Day Comfort</div></div>
+        <div class="med-stat"><div class="med-stat-number">4.9★</div><div class="med-stat-label">Average Rating</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="med-products" id="products">
+    <div class="med-container">
+      <div class="med-section-label">Shop Collection</div>
+      <h2 class="med-section-title">Choose Your Armor</h2>
+      <div class="med-products-grid">
+        
+        {% for product in collections.all.products limit:3 %}
+        <div class="med-product-card">
+          <div class="med-product-image">
+            {% if forloop.first %}<span class="med-product-badge">Best Seller</span>{% endif %}
+            {% if forloop.index == 2 %}<span class="med-product-badge med-badge-new">New</span>{% endif %}
+            <img src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}">
+          </div>
+          <div class="med-product-info">
+            <h3>{{ product.title }}</h3>
+            <p>{{ product.description | strip_html | truncate: 80 }}</p>
+            <div class="med-product-footer">
+              <span class="med-price">{{ product.price | money }}</span>
+              <button class="med-add-to-cart" data-product-id="{{ product.variants.first.id }}">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="med-testimonials">
+    <div class="med-container">
+      <div class="med-section-label">Reviews</div>
+      <h2 class="med-section-title">What Healthcare Workers Say</h2>
+      <div class="med-testimonials-grid">
+        <div class="med-testimonial">
+          <div class="med-testimonial-header">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=120&h=120&fit=crop" alt="Dr. Sarah Chen" class="med-testimonial-avatar">
+            <div class="med-testimonial-meta"><h4>Dr. Sarah Chen</h4><span>Cardiac Surgeon, Auckland Hospital</span></div>
+          </div>
+          <div class="med-stars">★★★★★</div>
+          <p class="med-testimonial-text">"I've tried every compression sock on the market. These are the only ones that don't cut off circulation at the top band after 10 hours in surgery. Game changer."</p>
+        </div>
+        <div class="med-testimonial">
+          <div class="med-testimonial-header">
+            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=120&h=120&fit=crop" alt="Jessica Williams" class="med-testimonial-avatar">
+            <div class="med-testimonial-meta"><h4>Jessica Williams</h4><span>ICU Nurse, Wellington</span></div>
+          </div>
+          <div class="med-stars">★★★★★</div>
+          <p class="med-testimonial-text">"My varicose veins were getting so bad I considered leaving bedside nursing. After 3 months in Med Socks, the pain is completely gone. I bought 5 pairs."</p>
+        </div>
+        <div class="med-testimonial">
+          <div class="med-testimonial-header">
+            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=120&h=120&fit=crop" alt="Tom Bradley" class="med-testimonial-avatar">
+            <div class="med-testimonial-meta"><h4>Tom Bradley</h4><span>Paramedic, Christchurch</span></div>
+          </div>
+          <div class="med-stars">★★★★★</div>
+          <p class="med-testimonial-text">"Running between calls, standing at scenes, these socks keep my legs fresh. The moisture-wicking actually works - no more swamp foot after 14 hour shifts."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="med-final-cta">
+    <div class="med-container">
+      <h2>Your Feet Carry You Through<br>Every Life You Save</h2>
+      <p>Join the community of healthcare professionals who've ended their shift pain. Free NZ shipping on orders over $60.</p>
+      <a href="#products" class="med-btn med-btn-large">Shop Med Socks Now</a>
+      <p class="med-guarantee">30-Day Comfort Guarantee • Free Returns • NZ Owned & Operated</p>
+    </div>
+  </section>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Navigation
+  const nav = document.getElementById('medNav');
+  const navToggle = document.getElementById('navToggle');
+  const navDropdown = document.getElementById('navDropdown');
+  const closeNav = document.getElementById('closeNav');
+  const navOverlay = document.getElementById('navOverlay');
+  let lastScroll = 0;
+
+  function toggleMenu() {
+    navToggle.classList.toggle('active');
+    navDropdown.classList.toggle('active');
+    navOverlay.classList.toggle('active');
+    document.body.style.overflow = navDropdown.classList.contains('active') ? 'hidden' : '';
+  }
+
+  navToggle.addEventListener('click', toggleMenu);
+  closeNav.addEventListener('click', toggleMenu);
+  navOverlay.addEventListener('click', toggleMenu);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navDropdown.classList.contains('active')) toggleMenu();
+  });
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    if (currentScroll > 100) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+    
+    if (currentScroll > lastScroll && currentScroll > 200) nav.classList.add('hidden');
+    else nav.classList.remove('hidden');
+    
+    lastScroll = currentScroll;
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  // Cart functionality
+  function updateCart() {
+    fetch('/cart.js')
+      .then(r => r.json())
+      .then(cart => {
+        const badge = document.getElementById('cartBadge');
+        if (badge) {
+          badge.textContent = cart.item_count;
+          badge.style.display = cart.item_count > 0 ? 'flex' : 'none';
+        }
+      });
+  }
+  updateCart();
+
+  // Add to cart buttons
+  document.querySelectorAll('.med-add-to-cart').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const id = this.dataset.productId;
+      fetch('/cart/add.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: id, quantity: 1 })
+      })
+      .then(() => {
+        this.textContent = 'Added!';
+        this.style.background = '#0D7377';
+        updateCart();
+        setTimeout(() => {
+          this.textContent = 'Add to Cart';
+          this.style.background = '#1B1B1B';
+        }, 2000);
+      });
+    });
+  });
+});
+</script>
